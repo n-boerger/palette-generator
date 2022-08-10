@@ -1,0 +1,13 @@
+{
+  "name": "palette-generator",
+  "version": "0.7.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nboerger",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.77.2"
+  }
+}
