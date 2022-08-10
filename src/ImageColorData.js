@@ -11,8 +11,7 @@ export default class ImageColorData {
     }
 
     static async fromUrl(url) {
-        const image = new Image();
-        const imageData = await new Promise((resolve) => {
+        const imageData = await new Promise(resolve => {
             const image = new Image();
 
             image.onload = () => {
@@ -26,6 +25,9 @@ export default class ImageColorData {
                 resolve(
                     context.getImageData(0, 0, image.width, image.height)
                 );
+            };
+            
+            image.src = url;
         });
 
         return new ImageColorData(imageData);
