@@ -26,24 +26,22 @@ export default class ImageColorData {
                     context.getImageData(0, 0, image.width, image.height)
                 );
             };
-            
+
             image.src = url;
         });
 
         return new ImageColorData(imageData);
     }
 
-    #colors = [];
-
     constructor(imageData) {
         this.#imageData = imageData.data;
     }
 
     colors() {
-        if(this.#colors.length !== 0) return this.#colors;
+	const colors = [];
 
         for(let i = 0; i < this.#imageData.length; i += 4) {
-            this.#colors.push(new Color(
+            colors.push(new Color(
                 this.#imageData[i],
                 this.#imageData[i + 1],
                 this.#imageData[i + 2],
@@ -51,6 +49,6 @@ export default class ImageColorData {
             ));
         }
 
-        return this.#colors;
+        return colors;
     }
 }
