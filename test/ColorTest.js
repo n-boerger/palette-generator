@@ -45,13 +45,13 @@ describe('Test Color', function() {
     });
 
     it('Can determine equality to another color', function() {
-        const color = new Color(0, 10, 100, 200);
-        const equal = new Color(0, 10, 100, 200);
+        const color = new Color(1, 10, 100, 200);
+        const equal = new Color(1, 10, 100, 200);
         const differents = [
-            new Color(0, 0, 0, 0),
-            new Color(10, 10, 10, 10),
-            new Color(100, 100, 100, 100),
-            new Color(200, 200, 200, 200),
+            new Color(0, 10, 100, 200),
+            new Color(1, 0, 100, 200),
+            new Color(1, 10, 0, 200),
+            new Color(1, 10, 100, 0),
         ];
 
        test.bool(color.equals(equal)).isTrue();
