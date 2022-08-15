@@ -8,14 +8,14 @@ export default new class {
         return version;
     }
 
-    static get Algorithm {
+    static get Algorithm() {
         return {
             MostCommonMode,
             MostCommonAverage,
         };
     }
 
-    static get Generator {
+    static get Generator() {
         return PaletteGenerator;
     }
 }
