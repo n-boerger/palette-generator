@@ -1,4 +1,6 @@
 export default class PaletteGenerator {
+    #imageColorData;
+
     constructor(imageColorData) {
         this.#imageColorData = imageColorData;
     }
