@@ -9,6 +9,7 @@
   "author": "Nboerger",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
     "mocha": "^10.0.0",
     "rollup": "^2.77.2",
     "unit.js": "^2.1.1"
